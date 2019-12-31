@@ -1,6 +1,6 @@
 FROM golang:1.10-alpine
 
-ENV GHR_VERSION="0.10.2"
+ENV GHR_VERSION="0.13.0"
 
 RUN apk add --update --no-cache git \
     && apk add --no-cache --virtual build-deps curl \
