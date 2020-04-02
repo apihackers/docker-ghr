@@ -1,0 +1,15 @@
+name: Test
+
+on: [push, pull_request]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v1
+        with:
+          depth: 1
+          submodules: false
+      - name: Build docker image
+        run: docker build .
